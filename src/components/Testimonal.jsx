@@ -20,8 +20,6 @@ const Testimonal = ({ from, image, children }) => {
               height="60"
               width="60"
               alt="profile picture"
-              loading="lazy"
-              placeholder="blurred"
             />
           </div>
         )}
