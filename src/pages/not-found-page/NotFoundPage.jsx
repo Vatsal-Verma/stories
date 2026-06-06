@@ -8,8 +8,6 @@ const NotFoundPage = () => {
     <>
       <title>{title}</title>
 
-      <jio-navbar property="https://vite-stories-jenkins.netlify.app/" />
-
       <main className="page">
         <img src={FireImage} alt="Jenkins on fire logo" className="image" />
 
@@ -36,8 +34,6 @@ const NotFoundPage = () => {
           .
         </p>
       </main>
-
-      <jio-footer property="https://vite-stories-jenkins.netlify.app/" />
     </>
   );
 };

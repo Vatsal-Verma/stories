@@ -64,8 +64,6 @@ const AllPage = () => {
 
   return (
     <div id="all-page">
-      <jio-navbar property="https://vite-stories-jenkins.netlify.app/" />
-
       <div className="all-page-container">
         <div className="all-page-row">
           <div className="all-page-col all-page-text-center">
@@ -123,8 +121,6 @@ const AllPage = () => {
       </div>
 
       <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
-
-      <jio-footer property="https://vite-stories-jenkins.netlify.app/" />
     </div>
   );
 };

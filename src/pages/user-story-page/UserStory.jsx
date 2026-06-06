@@ -65,8 +65,6 @@ export default function UserStory() {
 
   return (
     <>
-      <jio-navbar property="https://vite-stories-jenkins.netlify.app/" />
-
       <div className="story-navigation">
         {data?.prev ? (
           <Link to={`/user-story/${data.prev.slug}`} className="story-link">
@@ -161,8 +159,6 @@ export default function UserStory() {
           ) : null}
         </section>
       </main>
-
-      <jio-footer property="https://vite-stories-jenkins.netlify.app/" />
     </>
   );
 }
