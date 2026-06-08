@@ -1,9 +1,9 @@
-import TestMap from '../../components/TestMap';
+import StoryMap from '../../components/StoryMap';
 import 'leaflet/dist/leaflet.css';
  
 const MapPage = () => {
   return (
-      <TestMap />
+      <StoryMap />
   );
 };
  
