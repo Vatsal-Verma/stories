@@ -1,9 +1,11 @@
-function Map() {
-    return (
-        <>
-            <center><h1>This is the map page</h1></center>
-        </>
-    )
-}
-
-export default Map
+import TestMap from '../../components/TestMap';
+import 'leaflet/dist/leaflet.css';
+ 
+const MapPage = () => {
+  return (
+      <TestMap />
+  );
+};
+ 
+export default MapPage;
+ 

@@ -1,8 +1,6 @@
 import {
   getStoryStaticPaths,
   loadUserStoryRouteData,
-  getStorySlugs,
-  loadStoryData,
   allStoriesLoader,
 } from './utils/storyload.js';
 import Layout from './layout/Layout.jsx';

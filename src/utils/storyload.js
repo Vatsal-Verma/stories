@@ -118,6 +118,15 @@ export const loadStoryData = async slug => {
     quotes: Array.isArray(data.quotes) ? data.quotes : [],
     image: getStoryImage(slug),
     quoteImage: getQuoteImage(slug),
+    
+    map: data.map
+    ? {
+      authored_by: data.map.authored_by ?? null,
+      location: data.map.location ?? null,
+      geojson: data.map.geojson ?? null,      // null for stories without it
+      industries: data.map.industries ?? [],
+    }
+  : null,
   };
 };
 
