@@ -1,3 +1,76 @@
 body {
   margin: 0;
+  font-family: system-ui, sans-serif;
+
+}
+
+.landing-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  padding: 2rem;
+}
+
+.landing-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 480px;
+}
+
+.landing-logo {
+  width: 160px;
+  height: auto;
+  margin-bottom: 1.75rem;
+}
+
+.landing-container h1 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 1rem;
+}
+
+.landing-container p {
+  font-size: 1rem;
+  color: #666666;
+  line-height: 1.65;
+  margin-bottom: 2rem;
+}
+
+.landing-buttons {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.6rem 1.6rem;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.btn-primary {
+  background-color: #1a1a1a;
+  color: #ffffff;
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: #1a1a1a;
+  border: 1px solid #cccccc;
+}
+
+.landing-wip {
+  font-size: 0.875rem;
+  color: #999999;
+  margin-bottom: 0;
 }
