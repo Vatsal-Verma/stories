@@ -56,7 +56,7 @@ const getStoryRaw = async slug => {
   const loader = storyFiles[key];
 
   if (!loader) {
-    throw new Error(`Story not found: ${slug}`);
+    throw new Response('Not Found', { status: 404 });
   }
 
   return await loader();
