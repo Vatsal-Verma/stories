@@ -5,7 +5,6 @@
   align-items: center;
 }
 
-/* Quote bubble */
 .testimonial blockquote {
   background-color: #ffffff;
   border: 0;
@@ -23,7 +22,6 @@
   line-height: 1.7;
 }
 
-/* Down arrow pointer — bottom-left of bubble */
 .testimonial blockquote::after {
   content: '';
   position: absolute;
@@ -34,7 +32,6 @@
   border-color: #ffffff transparent transparent transparent;
 }
 
-/* Attribution row */
 .testimonial .attribution {
   display: flex;
   justify-content: center;
@@ -43,16 +40,22 @@
   gap: 12px;
 }
 
-/* Avatar */
-.testimonial .attribution img {
+.testimonial .attribution .avatar {
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  object-fit: cover;
+  overflow: hidden;
   flex-shrink: 0;
 }
 
-/* Name + title pill */
+.testimonial .attribution .avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+}
+
 .testimonial .from {
   background: #f1f5f5;
   border-radius: 15px;

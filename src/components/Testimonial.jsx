@@ -5,22 +5,18 @@ const Testimonial = ({ from, image, children }) => {
   return (
     <div className="testimonial pb-3">
       <blockquote>{children}</blockquote>
-      <div className="attribution d-flex justify-content-center align-items-center">
+      <div className="attribution">
         {image ? (
-          <div>
+          <div className="avatar">
             <img
               src={image}
-              className="mr-3 rounded-circle"
-              height="60"
-              width="60"
               alt="profile picture"
               loading="lazy"
             />
           </div>
         ) : null}
-        <div className="from mx-3 px-4 py-2">
+        <div className="from">
           <span className="name">{from.split(',')[0]}</span>
-
           <span className="title">
             {from.split(',').slice(1).join(',').trim()}
           </span>
