@@ -2,6 +2,7 @@ import { useEffect, useRef, useState, useMemo } from 'react';
 import { renderToStaticMarkup } from 'react-dom/server';
 import { allStoriesLoader } from '../utils/storyload';
 import StoryPopup from './StoryPopup';
+import jenkinsMapPin from '../assets/images/jenkins_map_pin-180x180-1.png';
 import './StoryMap.css';
 
 function extractCountry(location) {
@@ -40,8 +41,7 @@ const StoryMap = () => {
 
     import('leaflet').then(L => {
       const jenkinsIcon = L.icon({
-        iconUrl:
-          'https://raw.githubusercontent.com/jenkins-infra/stories/refs/heads/main/src/images/jenkins_map_pin-180x180-1.png',
+        iconUrl: jenkinsMapPin,
         iconSize: [40, 40],
         iconAnchor: [20, 40],
         popupAnchor: [0, -44],
