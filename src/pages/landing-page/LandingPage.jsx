@@ -1,12 +1,13 @@
 import { Link } from "react-router-dom";
 import "./LandingPage.css";
+import jenkinsImage from '../../assets/images/jenkins.svg'
 
 export default function LandingPage() {
   return (
     <div className="landing-page">
       <div className="landing-container">
         <img
-          src="https://www.jenkins.io/images/logos/jenkins/jenkins.svg"
+          src={jenkinsImage}
           alt="Jenkins logo"
           className="landing-logo"
         />
