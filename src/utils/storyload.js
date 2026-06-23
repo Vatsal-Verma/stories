@@ -72,8 +72,6 @@ const getStoryImage = slug => {
   return entry ? entry[1] : null;
 };
 
-console.log(Object.entries(allImages).slice(0, 3));
-
 const getQuoteImage = slug => {
   const key = `../user-story/${slug}/quote.png`;
   return quoteImages[key] ?? null;
