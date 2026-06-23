@@ -71,7 +71,7 @@ export default function UserStory() {
       <meta name="description" content={tagLine ?? ''} />
       <meta property="og:title" content={story.title ?? data?.title ?? ''} />
       <meta property="og:description" content={tagLine ?? ''} />
-      <meta property="og:image" content={data?.image ?? ''} />
+      <meta property="og:image" content={storyImageSrc ?? ''} />
     </Head>
       <div className="story-navigation">
         {data?.prev ? (
