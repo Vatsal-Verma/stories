@@ -73,9 +73,6 @@ export default function UserStory() {
       <meta property="og:description" content={tagLine ?? ''} />
       <meta property="og:image" content={data?.image ?? ''} />
     </Head>
-      <p>
-        {JSON.stringify(data, null, 2)}
-      </p>
       <div className="story-navigation">
         {data?.prev ? (
           <Link to={`/user-story/${data.prev.slug}`} className="story-link">
