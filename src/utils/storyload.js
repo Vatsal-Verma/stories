@@ -10,12 +10,14 @@ const allImages = import.meta.glob(
   '../user-story/**/*.{png,jpg,jpeg,webp,svg}',
   {
     eager: true,
+    query: '?url',
     import: 'default',
   },
 );
 
 const quoteImages = import.meta.glob('../user-story/**/quote.png', {
   eager: true,
+  query: '?url',
   import: 'default',
 });
 
@@ -69,6 +71,8 @@ const getStoryImage = slug => {
   );
   return entry ? entry[1] : null;
 };
+
+console.log(Object.entries(allImages).slice(0, 3));
 
 const getQuoteImage = slug => {
   const key = `../user-story/${slug}/quote.png`;
