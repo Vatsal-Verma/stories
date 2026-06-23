@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, useLoaderData } from 'react-router-dom';
+import { Head } from 'vite-react-ssg';
 import './UserStory.css';
 import Testimonial from '../../components/Testimonial';
 
@@ -65,6 +66,13 @@ export default function UserStory() {
 
   return (
     <>
+    <Head>
+      <title>{story.title ?? data?.title ?? 'Jenkins User Story'}</title>
+      <meta name="description" content={tagLine ?? ''} />
+      <meta property="og:title" content={story.title ?? data?.title ?? ''} />
+      <meta property="og:description" content={tagLine ?? ''} />
+      <meta property="og:image" content={data?.image ?? ''} />
+    </Head>
       <p>
         {JSON.stringify(data, null, 2)}
       </p>
