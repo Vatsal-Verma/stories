@@ -38,7 +38,7 @@ const Modal = ({ isOpen, onClose }) => {
           target="_blank"
           rel="noopener noreferrer"
           className="all-page-github-link"
-       >
+        >
           Share Your Story Now
         </a>
         <button onClick={onClose} className="all-page-close-btn">
@@ -49,14 +49,115 @@ const Modal = ({ isOpen, onClose }) => {
   );
 };
 
+const SORT_OPTIONS = [
+  { key: 'az',     label: 'A-Z' },
+  { key: 'za',     label: 'Z-A' },
+  { key: 'latest', label: 'latest' },
+  { key: 'oldest', label: 'oldest' },
+];
+
+function applyFiltersAndSort(stories, industry, sortKey) {
+  let result = [...stories];
+
+  if (industry && industry !== 'all') {
+    result = result.filter(s =>
+      Array.isArray(s.map?.industries) && s.map.industries.includes(industry)
+    );
+  }
+
+  switch (sortKey) {
+    case 'az':
+      result.sort((a, b) => (a.title ?? '').localeCompare(b.title ?? ''));
+      break;
+    case 'za':
+      result.sort((a, b) => (b.title ?? '').localeCompare(a.title ?? ''));
+      break;
+    case 'latest':
+      result.sort((a, b) => new Date(b.date) - new Date(a.date));
+      break;
+    case 'oldest':
+      result.sort((a, b) => new Date(a.date) - new Date(b.date));
+      break;
+    default:
+      break;
+  }
+
+  return result;
+}
+
+const FilterBar = ({ industries, selectedIndustry, onIndustryChange, sortKey, onSortChange }) => (
+  <div className="all-page-filter-bar">
+    <div className="all-page-filter-left">
+      <label className="all-page-filter-label" htmlFor="industry-select">
+        Filter By Industry
+      </label>
+      <div className="all-page-select-wrapper">
+        <select
+          id="industry-select"
+          className="all-page-industry-select"
+          value={selectedIndustry}
+          onChange={e => onIndustryChange(e.target.value)}
+        >
+          <option value="all">All Industries</option>
+          {industries.map(ind => (
+            <option key={ind} value={ind}>{ind}</option>
+          ))}
+        </select>
+        <span className="all-page-select-arrow">&#8964;</span>
+      </div>
+    </div>
+
+    <div className="all-page-sort-right">
+      <span className="all-page-filter-label">Sort by</span>
+      <div className="all-page-sort-pills">
+        {SORT_OPTIONS.map(opt => (
+          <button
+            key={opt.key}
+            className={`all-page-sort-pill ${sortKey === opt.key ? 'active' : ''}`}
+            onClick={() => onSortChange(opt.key)}
+          >
+            {opt.label}
+          </button>
+        ))}
+      </div>
+    </div>
+  </div>
+);
+
 const AllPage = () => {
   const stories = useLoaderData() ?? [];
   const [displayCount, setDisplayCount] = React.useState(10);
   const [isModalOpen, setIsModalOpen] = React.useState(false);
+  const [selectedIndustry, setSelectedIndustry] = React.useState('all');
+  const [sortKey, setSortKey] = React.useState('latest');
   const storiesPerLoad = 10;
 
-  const totalStories = stories.length;
-  const displayedStories = stories.slice(0, displayCount);
+  const industries = React.useMemo(() => {
+    const set = new Set(
+      stories.flatMap(s =>
+        Array.isArray(s.map?.industries) ? s.map.industries : []
+      ).filter(Boolean)
+    );
+    return [...set].sort();
+  }, [stories]);
+
+  const handleIndustryChange = (val) => {
+    setSelectedIndustry(val);
+    setDisplayCount(storiesPerLoad);
+  };
+
+  const handleSortChange = (val) => {
+    setSortKey(val);
+    setDisplayCount(storiesPerLoad);
+  };
+
+  const filteredStories = React.useMemo(
+    () => applyFiltersAndSort(stories, selectedIndustry, sortKey),
+    [stories, selectedIndustry, sortKey]
+  );
+
+  const totalStories = filteredStories.length;
+  const displayedStories = filteredStories.slice(0, displayCount);
 
   const handleLoadMore = () => {
     setDisplayCount(prev => prev + storiesPerLoad);
@@ -94,18 +195,31 @@ const AllPage = () => {
 
         <div className="all-page-row">
           <h2 className="all-page-userstories-heading">Jenkins User Stories</h2>
+
+          <FilterBar
+            industries={industries}
+            selectedIndustry={selectedIndustry}
+            onIndustryChange={handleIndustryChange}
+            sortKey={sortKey}
+            onSortChange={handleSortChange}
+          />
+
           <div className="all-page-col all-page-cards-wrapper">
-            {displayedStories.map(story => (
-              <UserStoryCard
-                key={story.slug}
-                slug={story.slug}
-                image={story.image}
-                title={story.title}
-                date={story.date}
-                tag_line={story.tag_line}
-                body_content={story.body_content}
-              />
-            ))}
+            {displayedStories.length > 0 ? (
+              displayedStories.map(story => (
+                <UserStoryCard
+                  key={story.slug}
+                  slug={story.slug}
+                  image={story.image}
+                  title={story.title}
+                  date={story.date}
+                  tag_line={story.tag_line}
+                  body_content={story.body_content}
+                />
+              ))
+            ) : (
+              <p className="all-page-no-results">No stories match the selected filter.</p>
+            )}
           </div>
         </div>
 

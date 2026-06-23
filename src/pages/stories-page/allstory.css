@@ -235,3 +235,99 @@
   font-family: system-ui, sans-serif;
   font-size: 400px;
 }
+
+/* ── Filter Bar ── */
+.all-page-filter-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  padding: 0.6rem 1rem;
+  margin-bottom: 1.5rem;
+  background-color: #ffffff;
+  /* border: 1px solid #e0e0e0; */
+  border-radius: 6px;
+  width: 100%;
+}
+
+.all-page-filter-left,
+.all-page-sort-right {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.all-page-filter-label {
+  font-size: 0.875rem;
+  color: #555;
+  white-space: nowrap;
+}
+
+/* Select */
+.all-page-select-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.all-page-industry-select {
+  appearance: none;
+  background-color: #ffffff;
+  color: #222;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 0.3rem 2rem 0.3rem 0.75rem;
+  font-size: 0.875rem;
+  cursor: pointer;
+  min-width: 140px;
+}
+
+.all-page-industry-select:focus {
+  outline: none;
+  border-color: #888;
+}
+
+.all-page-select-arrow {
+  position: absolute;
+  right: 0.5rem;
+  pointer-events: none;
+  color: #888;
+  font-size: 1rem;
+  line-height: 1;
+}
+
+/* Sort pills */
+.all-page-sort-pills {
+  display: flex;
+  gap: 0.25rem;
+}
+
+.all-page-sort-pill {
+  background: transparent;
+  color: #555;
+  border: none;
+  border-radius: 4px;
+  padding: 0.3rem 0.65rem;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+}
+
+.all-page-sort-pill:hover {
+  background-color: #f0f0f0;
+  color: #222;
+}
+
+.all-page-sort-pill.active {
+  background-color: #222;
+  color: #fff;
+}
+
+/* Empty state */
+.all-page-no-results {
+  color: #888;
+  padding: 2rem 0;
+  text-align: center;
+  width: 100%;
+}
