@@ -4,6 +4,8 @@ import { Head } from 'vite-react-ssg';
 import './UserStory.css';
 import Testimonial from '../../components/Testimonial';
 
+const BASE_URL = 'https://vite-stories-jenkins.netlify.app';
+
 const titles = {
   build_tools: 'Build Tools',
   community_supports: 'Community Support',
@@ -64,15 +66,21 @@ export default function UserStory() {
   const testimonial = data?.quotes?.[0] ?? story?.quotes?.[0] ?? null;
   const quoteImage = data?.quoteImage ?? null;
 
+  const pageTitle = story.title ?? data?.title ?? 'Jenkins User Story';
+  const ogImage = storyImageSrc ? `${BASE_URL}${storyImageSrc}` : '';
+  const ogUrl = `${BASE_URL}/user-story/${data?.slug ?? ''}`;
+
   return (
     <>
-    <Head>
-      <title>{story.title ?? data?.title ?? 'Jenkins User Story'}</title>
-      <meta name="description" content={tagLine ?? ''} />
-      <meta property="og:title" content={story.title ?? data?.title ?? ''} />
-      <meta property="og:description" content={tagLine ?? ''} />
-      <meta property="og:image" content={storyImageSrc ?? ''} />
-    </Head>
+      <Head>
+        <title>{pageTitle}</title>
+        <meta name="description" content={tagLine ?? ''} />
+        <meta property="og:title" content={pageTitle} />
+        <meta property="og:description" content={tagLine ?? ''} />
+        <meta property="og:image" content={ogImage} />
+        <meta property="og:url" content={ogUrl} />
+      </Head>
+
       <div className="story-navigation">
         {data?.prev ? (
           <Link to={`/user-story/${data.prev.slug}`} className="story-link">
