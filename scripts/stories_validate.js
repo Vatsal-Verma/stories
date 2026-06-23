@@ -5,7 +5,6 @@ import Ajv from 'ajv';
 import addFormats from 'ajv-formats';
 import schema from './story-schema.js';
 
-// setup
 const ajv = new Ajv({ allErrors: true, strict: false });
 addFormats(ajv);
 const validate = ajv.compile(schema);

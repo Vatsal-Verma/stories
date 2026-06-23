@@ -1,3 +1,4 @@
+
 export default {
   type: 'object',
   required: ['title', 'date', 'authored_by', 'body_content', 'image', 'post_name'],
@@ -29,10 +30,10 @@ export default {
         title:                   { type: 'string' },
         organization:            { type: 'string' },
         company:                 { type: 'string' },
-        company_website:         { type: 'string' },
+        company_website:         { type: 'string', format: 'uri' },
         teams:                   { type: 'array', items: { type: 'string' } },
         team_members:            { type: 'array', items: { type: 'string' } },
-        project_website:         { type: 'string' },
+        project_website:         { type: 'string', format: 'uri' },
         project_funding:         { type: 'string' },
         funded_by:               { type: 'string' },
         summary:                 { type: 'string' },
