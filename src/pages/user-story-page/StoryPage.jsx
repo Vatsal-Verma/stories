@@ -1,5 +1,6 @@
 import { Link, useLoaderData } from 'react-router-dom';
 import './StoryPage.css';
+import Testimonial from '../../components/testimonial/Testimonial'; 
 
 const titles = {
   build_tools: 'Build Tools',
@@ -56,6 +57,8 @@ export default function StoryPage() {
   const metadata = data?.metadata ?? {};
   const body = data?.body_content ?? {};
   const htmlParagraphs = Array.isArray(body.paragraphs) ? body.paragraphs : [];
+  const testimonial = data?.quotes?.[0] ?? story?.quotes?.[0] ?? null;
+  const quoteImage = data?.quoteImage ?? null;
 
   return (
     <>
@@ -123,6 +126,15 @@ export default function StoryPage() {
               }}
             />
           ))}
+
+          {testimonial?.content && testimonial?.from && (
+            <Testimonial
+              from={testimonial.from}
+              image={quoteImage}
+            >
+              {testimonial.content}
+            </Testimonial>
+          )}
         </section>
       </main>
     </>
