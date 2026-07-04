@@ -89,6 +89,7 @@ export const loadStoryData = async slug => {
     sourcePath: `src/user-story/${slug}/index.yaml`,
     story: data,
     title: data.title ?? data.metadata?.title ?? slug,
+    date: (data.date?.toISOString?.() ?? String(data.date ?? '')).split('T')[0],
     authored_by: data.authored_by ?? data.author ?? '',
     author: data.authored_by ?? data.author ?? '',
     tag_line: data.tag_line ?? '',
@@ -99,6 +100,11 @@ export const loadStoryData = async slug => {
     },
     image: getStoryImage(slug, data.image ?? null),
   };
+};
+
+export const loadAllStoriesRouteData = async () => {
+  const slugs = await getStorySlugs();
+  return Promise.all(slugs.map(slug => loadStoryData(slug)));
 };
 
 export const loadUserStoryRouteData = async ({ params }) => {
