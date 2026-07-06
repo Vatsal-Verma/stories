@@ -10,18 +10,21 @@
     "lint:yaml": "yamllint src/user-story/**/index.yaml",
     "preview": "vite preview",
     "format": "prettier . --write",
-    "format:check": "prettier . --check"
+    "format:check": "prettier . --check",
+    "validate:stories": "node src/story-schema/schema-validate.js"
   },
   "dependencies": {
+    "ajv": "^8.20.0",
+    "ajv-formats": "^3.0.1",
     "js-yaml": "^4.2.0",
     "react": "^19.2.6",
     "react-dom": "^19.2.6",
     "react-router": "^6.30.1",
     "react-router-dom": "^6.30.1",
-    "yaml-lint": "^1.7.0",
     "remark": "^15.0.1",
     "remark-html": "^16.0.1",
-    "vite-react-ssg": "^0.9.1-beta.1"
+    "vite-react-ssg": "^0.9.1-beta.1",
+    "yaml-lint": "^1.7.0"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
