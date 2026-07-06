@@ -6,6 +6,7 @@ import {
   loadUserStoryRouteData,
 } from './utils/storyload.js';
 import NotFound from './pages/not-found-page/NotFoundPage.jsx';
+import MapPage from './pages/map-page/MapPage.jsx';
 
 const routes = [
   {
@@ -22,6 +23,10 @@ const routes = [
         errorElement: <NotFound />,
         getStaticPaths: getStoryStaticPaths,
         loader: loadUserStoryRouteData,
+      },
+      {
+        path: '/map',
+        element: <MapPage />,
       },
       {
         path: '*',

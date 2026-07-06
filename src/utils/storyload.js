@@ -98,7 +98,20 @@ export const loadStoryData = async slug => {
       paragraphs,
     },
     image: getStoryImage(slug, data.image ?? null),
+    map: data.map
+      ? {
+          authored_by: data.map.authored_by ?? null,
+          location: data.map.location ?? null,
+          geojson: data.map.geojson ?? null,
+          industries: data.map.industries ?? [],
+        }
+      : null,
   };
+};
+
+export const allStoriesLoader = async () => {
+  const slugs = await getStorySlugs();
+  return Promise.all(slugs.map(slug => loadStoryData(slug)));
 };
 
 export const loadUserStoryRouteData = async ({ params }) => {
