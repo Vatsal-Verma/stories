@@ -6,12 +6,10 @@
   "scripts": {
     "dev": "vite-react-ssg dev",
     "build": "vite-react-ssg build",
-    "lint": "eslint .",
-    "lint:yaml": "yamllint src/user-story/**/index.yaml",
+    "lint": "eslint . && yamllint src/user-story/**/index.yaml && node src/story-schema/schema-validate.js",
     "preview": "vite preview",
     "format": "prettier . --write",
-    "format:check": "prettier . --check",
-    "validate:stories": "node src/story-schema/schema-validate.js"
+    "format:check": "prettier . --check"
   },
   "dependencies": {
     "ajv": "^8.20.0",
