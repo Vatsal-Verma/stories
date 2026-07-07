@@ -15,7 +15,7 @@ function UserStoryCard({ slug, image, title, date, tag_line, body_content }) {
   return (
     <div className="card">
       <div className="card-inner">
-        {image ? (
+        {image && (
           <Link to={`/user-story/${slug}`} className="image-wrapper">
             <img
               src={image}
@@ -24,7 +24,7 @@ function UserStoryCard({ slug, image, title, date, tag_line, body_content }) {
               loading="lazy"
             />
           </Link>
-        ) : null}
+        )}
 
         <div className="content">
           <h2 className="title">{title}</h2>
