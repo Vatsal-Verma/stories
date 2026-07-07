@@ -1,0 +1,997 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="https://www.xml-sitemaps.com/css/sitemap.css"?>
+<urlset
+    xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+    xmlns:fo="http://www.w3.org/1999/XSL/Format"
+    xmlns:xhtml="http://www.w3.org/1999/xhtml"
+    xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+            
+<url>
+  <loc>https://stories.jenkins.io/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/all/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/map/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/jenkins-backbone-of-continuous-integration/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/customers-digital-transformation/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/jenkins-is-the-way-for-networkupstools/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/to-improve-railway-signaling-solutions/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/to-automate-your-build-and-releases-for-all-products-going-forward/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/to-create-temporary-review-application-via-full-automation/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/to-fully-grasp-the-benefits-of-ci-cd/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/to-achieve-a-fast-pace-and-deliver-value-through-automation/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/to-build-projects/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/to-access-the-best-open-source-tool/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/to-reduce-costs-development-and-delivery-time/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/to-safe-secure-and-reliable-product-delivery/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/to-make-electric-vehicle-charging-possible-through-cloud/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/to-maximum-customization-while-giving-developers-no-code-pipelines/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.26</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/to-automate-create-and-execute/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.21</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/to-success-in-agile-projects/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.17</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/to-execute-all-my-desires-as-code/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.13</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/to-automate-everything-for-a-digital-transformation-journey/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.11</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/to-drive-your-production/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.09</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/to-create-a-repetitive-success-in-network-diagnostic-collection-monitoring-and-report-display/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.07</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/to-reliable-automation-strategies/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.05</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/to-deliver-super-awesome-projects-in-super-awesome-timelines/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.04</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/to-secure-your-software/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.04</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/to-remove-manual-efforts-to-perform-testing/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.03</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/to-bridge-gaps/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.02</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/to-mlops/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.02</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/to-be-a-better-gamer/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.01</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/to-automate-complex-tasks/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.01</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/to-give-all-your-work-and-headache-away/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.01</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/to-time-saving/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.01</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/to-achieve-greater-flexibility-in-projects-faster-deployments/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.01</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/to-fast-production-deployment/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.00</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/jenkins-is-the-way-to-developer-paradise/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.00</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/to-build-faster-and-hassle-free/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.00</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/to-create-a-ci-environment-on-unreal-engine-4/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.00</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/jenkins-is-the-way-to-freedom-from-boring-tasks/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.00</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/to-transfer-test-automation-culture-to-the-next-generation-of-software-testers-and-developers/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.00</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/to-save-money-with-fast-feature-delivery/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.00</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/to-accelerate-image-analysis/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.00</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/to-unify-development-experience-across-many-platforms/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.00</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/to-run-the-custom-automation-your-project-needs/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.00</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/to-build-and-deploy-ml-models-fast-and-free/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.00</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/to-develop-cloud-at-scale/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.00</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/to-reduce-deployment-costs-and-time/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.00</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/to-get-there-safe-and-on-time/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.00</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/to-reduce-time-to-market-in-software-development/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.00</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/to-achieve-simple-effective-code-driven-ci-cd-and-other-automation-pipelines/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.00</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/to-allow-people-to-self-service-help-launch-stuff-stabilize-releases-and-encourage-developers/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.00</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/to-reduce-operational-complexity/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.00</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/to-productiveness/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.00</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/to-provide-an-enterprise-grade-ci-cd-experience-to-engineers/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.00</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/to-achieve-speed-correctness/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.00</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/to-manage-your-software/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.00</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/to-spin-up-your-business/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.00</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/to-accelerate-production/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.00</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/to-make-deployment-easy-and-faster/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.00</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/to-automate-anything-anywhere/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.00</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/to-better-contributions-on-a-global-open-source-project/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.00</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/to-build-ci-cd-that-fits-advanced-and-unique-use-cases/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.00</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/to-fulfill-every-build-wish-we-might-come-up-with/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.00</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/to-make-my-life-in-the-test-core-team-great-again/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.00</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/to-faster-and-safer-shipping-to-clients/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.00</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/to-automate-the-work/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.00</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/to-revolutionize-the-world-of-automation/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.00</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/to-truly-automate-everything/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.00</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/to-modernize-your-devops-platform/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.00</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/to-build-and-maintain-even-the-most-complex-software-in-the-world/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.00</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/to-make-life-easy-and-fast/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.00</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/to-deploy-a-truly-functional-and-efficient-system-to-manage-build-pipelines/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.00</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/to-make-ci-easier/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.00</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/to-rapid-prototyping-life-science-applications/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.00</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/jenkins-is-the-way-to-enable-teams-to-ship-software-swiftly/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.00</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/to-build-a-scalable-ci-cd-orchestration-platform/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.00</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/to-manageable-ui-test-automation/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.00</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/to-integrate-the-thoughts/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.00</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/to-automate-builds-and-tests/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.00</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/to-link-deliverability-and-quality/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.00</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/to-migrate-telecom-applications-to-the-cloud/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.00</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/to-long-term-automation-strategies/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.00</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/to-build-and-test-multiple-environments/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.00</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/to-finally-bring-a-retail-giant-into-the-21st-century/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.00</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/jenkins-is-the-way-to-transform-healthcare/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.00</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/jenkins-is-the-way-to-win/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.00</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/to-faster-product-release/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.00</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/to-transformation/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.00</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/to-speed-up-the-world/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.00</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/to-cook-almost-everything-in-devops-world/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.00</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/to-continuously-build-test-and-release-your-software/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.00</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/to-automate-and-accelerate-application-deployment/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.00</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/to-scale-your-ci-cd-pipelines/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.00</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/to-a-streamlined-mortgage-industry/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.00</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/jenkins-is-the-way-to-improve-solution-development/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.00</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/to-automate-the-lives-of-all-programmers-who-want-a-quality-product/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.00</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/to-deliver-our-new-releases-on-time/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.00</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/to-test-software-packages-overnight/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.00</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/to-save-the-day/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.00</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/to-guaranteed-quality-for-your-devices/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.00</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/to-make-the-devops-process-simple-and-enjoyable/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.00</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/to-completely-automate-your-ci-cd-workflow/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.00</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/to-bring-brazils-freight-workers-to-the-21st-century/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.00</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/to-help-teams-focus-on-what-is-really-important/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.00</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/jenkins-is-the-way-to-automate-ci-cd-efficiently/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.00</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/jenkins-is-the-way-to-deliver-telecom-platforms-around-the-globe/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.00</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/to-speed-up-the-product-development-process/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.00</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/to-produce-ultra-modern-and-sophisticated-electronic-devices/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.00</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/to-bring-our-community-together/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.00</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/to-build-chat-bot-driven-declarative-pipelines-for-continuous-delivery/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.00</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/to-keep-the-world-spinning/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.00</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/to-kill-em-with-agile/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.00</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/to-drive-software-releases-from-manual-to-autopilot-mode/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.00</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/to-automate-the-world/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.00</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/to-save-your-valuable-time/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.00</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/to-improve-payment-systems/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.00</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/to-own-the-software-lifecycle/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.00</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/to-automate-development-tasks/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.00</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/to-make-our-life-easier/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.00</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/to-automate-test-execution-and-manage-distributed-systems/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.00</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/jenkins-is-the-way-to-devops-in-any-technology/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.00</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/to-help-developers-properly-do-their-jobs/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.00</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/to-drink-coffee-all-day/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.00</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/to-understand-and-simplify-your-software-workflows-2/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.00</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/to-understand-and-simplify-your-software-workflows/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.00</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/to-automate-almost-anything-in-an-enterprise/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.00</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/to-automate-anything-in-healthcare/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.00</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/to-automate-the-future-for-developers/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.00</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/to-successfully-deploy-enterprise-level-applications/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.00</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/jenkins-is-the-way-to-build-robust-and-specific-pipelines/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.00</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/jenkins-is-the-way-to-automate-all-the-things/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.00</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/to-automate-the-boring-stuff/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.00</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/to-develop-an-easy-lifestyle-for-developers/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.00</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/to-run-technical-simulations-for-developer-engineer-interviews/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.00</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/to-transform-server-build-automation/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.00</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/to-amazing-automation/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.00</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/to-awesome-delivery-with-accurate-ci-cd-setup/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.00</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/to-automate-your-job-and-transform-your-life/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.00</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/to-easy-development/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.00</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/to-own-the-future/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.00</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/to-explore-different-business-processes/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.00</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/to-build-and-release-faster/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.00</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/to-deliver/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.00</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/a-stable-projects-life/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.00</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/to-modernize-healthcare/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.00</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/to-make-better-recommendations/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.00</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/to-keep-ibm-always-on/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.00</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/to-deliver-amazing-products-easily/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.00</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/to-write-awesome-code/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.00</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/to-automate-everything/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.00</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/to-make-a-project-successful-without-wasting-time-on-unwanted-manual-efforts-2/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.00</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/to-revolutionize-the-integration-of-new-technologies/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.00</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/to-achieve-accuracy/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.00</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/to-make-your-work-comfortable/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.00</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/to-automate-continuous-delivery-pipelines/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.00</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/jenkins-is-the-way-to-revolutionize-loyalty-programs/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.00</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/to-manage-minecraft-in-the-cloud/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.00</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/to-create-collaboration-between-the-dev-and-the-ops-teams/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.00</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/to-tackle-any-challenge/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.00</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/to-rapid-development-and-testing/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.00</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/jenkins-is-the-way-to-fintech-excellence/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.00</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/to-cast-magic-of-continuous-delivery-2/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.00</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/to-add-spicy-flavors-to-muzkats-processes/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.00</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/to-experiments-and-eternity/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.00</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/to-automate-and-improve/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.00</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/to-make-ci-testing-management-easy-and-enjoyable/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.00</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/to-build-for-the-future/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.00</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/to-add-stability-to-the-overall-software-delivery-process/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.00</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/to-take-the-pressure-off-your-dev-teams/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.00</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/to-happy-developers/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.00</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/to-build-industry-leading-log-management/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.00</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/jenkins-is-the-way-to-show-people-how-its-done/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.00</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/to-save-money/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.00</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/to-build-continuous-communities-in-your-business/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.00</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/to-simplify-things-for-devops-world/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.00</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/to-achieve-a-stable-cicd-enterprise-solution/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.00</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/jenkins-is-the-way-to-create-an-awesome-pipeline/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.00</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/to-create-a-computer-on-wheels/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.00</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/to-automate-testing-reporting-and-scaling/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.00</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/to-give-nitro-to-builds-and-deployments/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.00</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/to-make-your-configuration-as-a-code-possible/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.00</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/to-scale-your-builds/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.00</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/to-robot-em-all/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.00</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/to-consistency/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.00</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/to-build-and-deliver-software/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.00</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/to-devsecops/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.00</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/to-do-things-quickly-simply-and-in-a-powerful-way/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.00</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/to-scale-from-the-ground-up/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.00</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/to-manage-anything-and-everything-through-pipelines/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.00</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/to-automate-noc-operations/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.00</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/to-simplify-the-cloud-onboarding-process/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.00</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/to-get-stuff-done/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.00</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/to-space/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.00</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/to-facilitate-day-to-day-work/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.00</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/to-cast-magic-of-continuous-delivery/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.00</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/to-accelerate-automation-in-the-cloud/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.00</priority>
+</url>
+<url>
+  <loc>https://stories.jenkins.io/user-story/to-do-ci-cd-right/</loc>
+  <lastmod>2026-07-07T11:04:36+00:00</lastmod>
+  <priority>0.00</priority>
+</url>
+</urlset>
