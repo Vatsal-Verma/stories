@@ -8,10 +8,7 @@ const GITHUB_BRANCH = 'main';
 
 function Layout() {
   const matches = useMatches();
-  const sourcePath = matches.reduce(
-    (acc, match) => match.data?.sourcePath ?? acc,
-    null,
-  );
+  const sourcePath = matches.reduce((acc, match) => match.data?.sourcePath ?? acc, null);
 
   return (
     <>
