@@ -113,11 +113,6 @@ export const loadStoryData = async slug => {
   };
 };
 
-export const allStoriesLoader = async () => {
-  const slugs = await getStorySlugs();
-  return Promise.all(slugs.map(slug => loadStoryData(slug)));
-};
-
 export const loadUserStoryRouteData = async ({ params }) => {
   const slugs = await getStorySlugs();
   const index = slugs.indexOf(params.slug);
