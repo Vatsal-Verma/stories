@@ -132,10 +132,9 @@ const StoryMap = () => {
   useEffect(() => {
     if (!mapInstanceRef.current) return;
 
-    const filteredIds = new Set(filteredStories.map(s => s.slug || s.id));
+    const filteredSlugs = new Set(filteredStories.map(s => s.slug));
     markersRef.current.forEach(({ marker, story }) => {
-      const id = story.slug || story.id;
-      if (filteredIds.has(id)) {
+      if (filteredSlugs.has(story.slug)) {
         if (!mapInstanceRef.current.hasLayer(marker)) {
           marker.addTo(mapInstanceRef.current);
         }
