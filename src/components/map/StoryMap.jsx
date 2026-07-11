@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState, useMemo } from 'react';
 import { renderToStaticMarkup } from 'react-dom/server';
-import { allStoriesLoader } from '../../utils/storyload';
+import { loadMapPinsData } from '../../utils/storyload';
 import StoryPopup from '../../components/story-popup/StoryPopUp';
 import jenkinsMapPin from '../../assets/Images/jenkins_map_pin-180x180-1.png';
 import './StoryMap.css';
@@ -25,7 +25,7 @@ const StoryMap = () => {
   const [showFilters, setShowFilters] = useState(false);
 
   useEffect(() => {
-    allStoriesLoader()
+    loadMapPinsData()
       .then(all => {
         setStories(all.filter(s => s.map?.geojson && s.map?.location));
         setStatus('ready');
