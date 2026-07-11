@@ -99,7 +99,6 @@ export const loadStoryData = async slug => {
     sourcePath: `src/user-story/${slug}/index.yaml`,
     story: data,
     title: data.title ?? data.metadata?.title ?? slug,
-    date: (data.date?.toISOString?.() ?? String(data.date ?? '')).split('T')[0],
     authored_by: data.authored_by ?? data.author ?? '',
     author: data.authored_by ?? data.author ?? '',
     tag_line: data.tag_line ?? '',
@@ -114,9 +113,25 @@ export const loadStoryData = async slug => {
   };
 };
 
+const loadCardSlim = async slug => {
+  const raw = await getStoryRaw(slug);
+  const data = jsYaml.load(raw) ?? {};
+
+  return {
+    slug,
+    title: data.title ?? data.metadata?.title ?? slug,
+    date: (data.date?.toISOString?.() ?? String(data.date ?? '')).split('T')[0],
+    authored_by: data.authored_by ?? data.author ?? '',
+    tag_line: data.tag_line ?? '',
+    metadata: data.metadata ?? {},
+    body_content: data.body_content ?? {},
+    image: getStoryImage(slug, data.image ?? null),
+  };
+};
+
 export const loadAllStoriesRouteData = async () => {
   const slugs = await getStorySlugs();
-  return Promise.all(slugs.map(slug => loadStoryData(slug)));
+  return Promise.all(slugs.map(slug => loadCardSlim(slug)));
 };
 
 export const loadUserStoryRouteData = async ({ params }) => {
