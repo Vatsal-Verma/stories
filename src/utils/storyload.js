@@ -97,15 +97,7 @@ export const loadStoryData = async slug => {
       ...bodyContent,
       paragraphs,
     },
-    image: getStoryImage(slug, data.image ?? null),
-    map: data.map
-      ? {
-          authored_by: data.map.authored_by ?? null,
-          location: data.map.location ?? null,
-          geojson: data.map.geojson ?? null,
-          industries: data.map.industries ?? [],
-        }
-      : null,
+    image: getStoryImage(slug, data.image ?? null)
   };
 };
 
@@ -136,4 +128,28 @@ export const loadUserStoryRouteData = async ({ params }) => {
       : null;
 
   return { ...story, prev, next };
+};
+
+const loadMapPinSlim = async slug => {
+  const raw = await getStoryRaw(slug);
+  const data = jsYaml.load(raw) ?? {};
+
+  return {
+    slug,
+    title: data.title ?? data.metadata?.title ?? slug,
+    image: getStoryImage(slug, data.image ?? null),
+    map: data.map
+      ? {
+          authored_by: data.map.authored_by ?? null,
+          location: data.map.location ?? null,
+          geojson: data.map.geojson ?? null,
+          industries: data.map.industries ?? [],
+        }
+      : null,
+  };
+};
+
+export const loadMapPinsData = async () => {
+  const slugs = await getStorySlugs();
+  return Promise.all(slugs.map(slug => loadMapPinSlim(slug)));
 };
