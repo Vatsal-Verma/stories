@@ -196,11 +196,6 @@ const StoryMap = () => {
 
   return (
     <div className="tmap-container">
-      <link
-        rel="stylesheet"
-        href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-      />
-
       <div className="tmap-sidebar">
         <h2 className="tmap-sidebar-title">Jenkins Stories Around the World</h2>
         <p className="tmap-sidebar-subtitle">{sidebarSubtitle}</p>
