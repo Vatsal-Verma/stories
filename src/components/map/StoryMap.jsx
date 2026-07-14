@@ -301,7 +301,7 @@ const StoryMap = () => {
                     <ul className="tmap-story-list">
                       {visible.map(story => (
                         <li
-                          key={story.id || story.slug}
+                          key={story.slug}
                           className="tmap-story-item"
                         >
                           <a

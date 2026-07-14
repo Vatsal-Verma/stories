@@ -150,9 +150,11 @@ const loadMapPinSlim = async slug => {
           authored_by: data.map.authored_by ?? null,
           location: data.map.location ?? null,
           geojson: data.map.geojson ?? null,
-          industries: data.map.industries ?? [],
         }
       : null,
+    metadata: {
+      industries: data.metadata?.industries ?? [],
+    },
   };
 };
 
