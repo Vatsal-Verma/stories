@@ -5,7 +5,6 @@
   "type": "module",
   "scripts": {
     "dev": "vite-react-ssg dev",
-    "prebuild": "node scripts/generate-routes.js",
     "build": "vite-react-ssg build",
     "lint": "eslint . && yamllint src/user-story/**/index.yaml && node src/story-schema/schema-validate.js",
     "validate:stories": "node src/story-schema/schema-validate.js",
