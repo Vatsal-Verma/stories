@@ -29,6 +29,7 @@
 
 #all-page .all-page-userstories-heading {
   color: var(--color-text-secondary);
+  font-family: system-ui, sans-serif;
   font-size: 1.6rem;
   margin-bottom: 1rem;
   font-weight: 600;
@@ -211,9 +212,4 @@
 .all-page-github-link:hover {
   background: var(--color-accent);
   color: var(--color-white);
-}
-
-.all-page-userstories-heading {
-  font-family: system-ui, sans-serif;
-  font-size: 400px;
 }

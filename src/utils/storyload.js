@@ -121,9 +121,7 @@ const loadCardSlim = async slug => {
     slug,
     title: data.title ?? data.metadata?.title ?? slug,
     date: (data.date?.toISOString?.() ?? String(data.date ?? '')).split('T')[0],
-    authored_by: data.authored_by ?? data.author ?? '',
     tag_line: data.tag_line ?? '',
-    metadata: data.metadata ?? {},
     body_content: data.body_content ?? {},
     image: getStoryImage(slug, data.image ?? null),
   };

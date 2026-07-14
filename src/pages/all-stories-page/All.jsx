@@ -93,7 +93,7 @@ const AllPage = () => {
         </div>
 
         <div className="all-page-row">
-          <h2 className="all-page-user  stories-heading">
+          <h2 className="all-page-userstories-heading">
             Jenkins User Stories
           </h2>
           <div className="all-page-col all-page-cards-wrapper">
