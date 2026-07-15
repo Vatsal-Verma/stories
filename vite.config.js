@@ -9,8 +9,8 @@ const storyDir = path.resolve('src/user-story');
 
 const dynamicRoutes = fs
   .readdirSync(storyDir, { withFileTypes: true })
-  .filter((entry) => entry.isDirectory())
-  .map((entry) => `/user-story/${entry.name}/`);
+  .filter(entry => entry.isDirectory())
+  .map(entry => `/user-story/${entry.name}/`);
 
 export default defineConfig({
   plugins: [
