@@ -12,6 +12,20 @@
   --color-text-tertiary: #222;
   --color-nav-bg: #212529;
   --color-nav-text: #c2c2c2;
+  --color-accent: #2c7cd1;
+  --color-accent-hover: #1d5fa0;
+  --color-accent-soft: rgba(44, 124, 209, 0.1);
+  --color-border-input: #cccccc;
+  --color-shadow-soft: rgba(0, 0, 0, 0.06);
+  --color-shadow-strong: rgba(0, 0, 0, 0.15);
+  --color-overlay: rgba(0, 0, 0, 0.5);
+  --color-gradient-accent: rgba(44, 124, 209, 0.05);
+  --color-gradient-transparent: rgba(255, 255, 255, 0);
+  --color-surface-story: #f8f9fa;
+  --color-text-light: #666666;
+  --color-text-disabled: #999999;
+  --color-text-strong: #111111;
+  --color-white: #ffffff;
 }
 
 @media (prefers-color-scheme: light) {
