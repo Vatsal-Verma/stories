@@ -26,6 +26,9 @@
   --color-text-disabled: #999999;
   --color-text-strong: #111111;
   --color-white: #ffffff;
+  --color-surface-dark: #2d333b;
+  --color-surface-dark-hover: #373e47;
+  --color-border-dark: #444c56;
 }
 
 @media (prefers-color-scheme: light) {
