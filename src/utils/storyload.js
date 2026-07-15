@@ -113,6 +113,25 @@ export const loadStoryData = async slug => {
   };
 };
 
+const loadCardSlim = async slug => {
+  const raw = await getStoryRaw(slug);
+  const data = jsYaml.load(raw) ?? {};
+
+  return {
+    slug,
+    title: data.title ?? data.metadata?.title ?? slug,
+    date: (data.date?.toISOString?.() ?? String(data.date ?? '')).split('T')[0],
+    tag_line: data.tag_line ?? '',
+    body_content: data.body_content ?? {},
+    image: getStoryImage(slug, data.image ?? null),
+  };
+};
+
+export const loadAllStoriesRouteData = async () => {
+  const slugs = await getStorySlugs();
+  return Promise.all(slugs.map(slug => loadCardSlim(slug)));
+};
+
 export const loadUserStoryRouteData = async ({ params }) => {
   const slugs = await getStorySlugs();
   const index = slugs.indexOf(params.slug);
