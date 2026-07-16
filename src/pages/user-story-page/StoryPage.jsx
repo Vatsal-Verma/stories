@@ -3,7 +3,7 @@ import { Head } from 'vite-react-ssg';
 import Testimonial from '../../components/testimonial/Testimonial.jsx';
 import './StoryPage.css';
 
-const BASE_URL = 'https://stories-seo.netlify.app';
+const BASE_URL = 'https://stories.jenkins.io';
 
 const titles = {
   build_tools: 'Build Tools',
