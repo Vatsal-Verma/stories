@@ -69,7 +69,7 @@ export default function StoryPage() {
   const quoteImage = data?.quoteImage ?? null;
   const hasTestimonial = Boolean(testimonial?.content && testimonial?.from);
   const pageTitle = story.title ?? data?.title ?? 'Jenkins User Story';
-  const ogImage = storyImageSrc ? `${BASE_URL}${storyImageSrc}` : '';
+  const ogImage = storyImageSrc ? `${BASE_URL}${storyImageSrc}` : `${BASE_URL}/opengraph.png`;
   const ogUrl = `${BASE_URL}/user-story/${data?.slug ?? ''}`;
 
   return (
