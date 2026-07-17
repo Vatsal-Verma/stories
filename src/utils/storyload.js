@@ -113,6 +113,25 @@ export const loadStoryData = async slug => {
   };
 };
 
+const loadCardSlim = async slug => {
+  const raw = await getStoryRaw(slug);
+  const data = jsYaml.load(raw) ?? {};
+
+  return {
+    slug,
+    title: data.title ?? data.metadata?.title ?? slug,
+    date: (data.date?.toISOString?.() ?? String(data.date ?? '')).split('T')[0],
+    tag_line: data.tag_line ?? '',
+    body_content: data.body_content ?? {},
+    image: getStoryImage(slug, data.image ?? null),
+  };
+};
+
+export const loadAllStoriesRouteData = async () => {
+  const slugs = await getStorySlugs();
+  return Promise.all(slugs.map(slug => loadCardSlim(slug)));
+};
+
 export const loadUserStoryRouteData = async ({ params }) => {
   const slugs = await getStorySlugs();
   const index = slugs.indexOf(params.slug);
@@ -135,4 +154,30 @@ export const loadUserStoryRouteData = async ({ params }) => {
       : null;
 
   return { ...story, prev, next };
+};
+
+const loadMapPinSlim = async slug => {
+  const raw = await getStoryRaw(slug);
+  const data = jsYaml.load(raw) ?? {};
+
+  return {
+    slug,
+    title: data.title ?? data.metadata?.title ?? slug,
+    image: getStoryImage(slug, data.image ?? null),
+    map: data.map
+      ? {
+          authored_by: data.map.authored_by ?? null,
+          location: data.map.location ?? null,
+          geojson: data.map.geojson ?? null,
+        }
+      : null,
+    metadata: {
+      industries: data.metadata?.industries ?? [],
+    },
+  };
+};
+
+export const loadMapPinsData = async () => {
+  const slugs = await getStorySlugs();
+  return Promise.all(slugs.map(slug => loadMapPinSlim(slug)));
 };
