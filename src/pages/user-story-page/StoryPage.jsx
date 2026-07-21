@@ -1,6 +1,9 @@
 import { Link, useLoaderData } from 'react-router-dom';
+import { Head } from 'vite-react-ssg';
 import Testimonial from '../../components/testimonial/Testimonial.jsx';
 import './StoryPage.css';
+
+const BASE_URL = 'https://stories.jenkins.io';
 
 const titles = {
   build_tools: 'Build Tools',
@@ -65,9 +68,20 @@ export default function StoryPage() {
   const testimonial = quotes[0];
   const quoteImage = data?.quoteImage ?? null;
   const hasTestimonial = Boolean(testimonial?.content && testimonial?.from);
+  const pageTitle = story.title ?? data?.title ?? 'Jenkins User Story';
+  const ogImage = storyImageSrc ? `${BASE_URL}${storyImageSrc}` : `${BASE_URL}/opengraph.png`;
+  const ogUrl = `${BASE_URL}/user-story/${data?.slug ?? ''}`;
 
   return (
     <>
+      <Head>
+        <title>{pageTitle}</title>
+        <meta name="description" content={tagLine ?? ''} />
+        <meta property="og:title" content={pageTitle} />
+        <meta property="og:description" content={tagLine ?? ''} />
+        <meta property="og:image" content={ogImage} />
+        <meta property="og:url" content={ogUrl} />
+      </Head>
       <div className="story-navigation">
         {data?.prev && (
           <Link to={`/user-story/${data.prev.slug}`} className="story-link">
