@@ -3,20 +3,20 @@ name: Story Submission → Create PR
 on:
   issues:
     types:
-      - opened
-
-permissions:
-  contents: write
-  pull-requests: write
-  issues: write
+      - labeled
 
 jobs:
   create-story-pr:
-    if: contains(github.event.issue.labels.*.name, 'story-submission')
+    if: >
+      github.repository == 'jenkins-infra/stories' &&
+      github.event.label.name == 'story-submission'
+
     runs-on: ubuntu-latest
 
-    env:
-      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    permissions:
+      contents: write
+      pull-requests: write
+      issues: write
 
     steps:
       - name: Checkout repository
@@ -26,7 +26,7 @@ jobs:
           fetch-depth: 0
 
       - name: Setup Node.js
-        uses: actions/setup-node@v6
+        uses: actions/setup-node@v4
         with:
           node-version: 24
 
@@ -35,12 +35,14 @@ jobs:
 
       - name: Parse Issue Form
         id: issue-parser
-        uses: stefanbuck/github-issue-parser@v3
+        uses: stefanbuck/github-issue-parser@cb6e97157cbf851e3a393ff8d57c93a484cc323f
 
       - name: Save parsed form
+        env:
+          PARSED_JSON: ${{ steps.issue-parser.outputs.jsonString }}
         run: |
           mkdir -p .story-submission
-          echo '${{ steps.issue-parser.outputs.jsonString }}' > .story-submission/parsed.json
+          printf '%s' "$PARSED_JSON" > .story-submission/parsed.json
 
       - name: Configure Git
         run: |
@@ -68,6 +70,9 @@ jobs:
         run: |
           node .github/scripts/generate-story.js
 
+      - name: Validate Story
+        run: npm run validate:stories
+
       - name: Commit Story
         id: commit
         run: |
@@ -86,21 +91,26 @@ jobs:
 
       - name: Push Branch
         if: steps.commit.outputs.changed == 'true'
+        env:
+          BRANCH: ${{ steps.branch.outputs.branch }}
         run: |
-          git push --set-upstream origin "${{ steps.branch.outputs.branch }}"
+          git push --set-upstream origin "$BRANCH"
 
       - name: Create Pull Request
         id: pr
+        if: steps.commit.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BRANCH: ${{ steps.branch.outputs.branch }}
         run: |
           ISSUE_TITLE=$(jq -r '.issue.title' "$GITHUB_EVENT_PATH")
           ISSUE_NUMBER=$(jq -r '.issue.number' "$GITHUB_EVENT_PATH")
-          BRANCH="${{ steps.branch.outputs.branch }}"
 
           if gh pr view "$BRANCH" >/dev/null 2>&1; then
             PR_URL=$(gh pr view "$BRANCH" --json url -q .url)
           else
             gh pr create \
-              --title "${ISSUE_TITLE}" \
+              --title "$ISSUE_TITLE" \
               --body "Automatically generated from issue #${ISSUE_NUMBER}" \
               --head "$BRANCH" \
               --base main
@@ -111,7 +121,10 @@ jobs:
           echo "url=$PR_URL" >> "$GITHUB_OUTPUT"
 
       - name: Comment on Issue
-        if: success()
+        if: steps.commit.outputs.changed == 'true' && success()
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR_URL: ${{ steps.pr.outputs.url }}
         run: |
           ISSUE_NUMBER=$(jq -r '.issue.number' "$GITHUB_EVENT_PATH")
 
@@ -120,10 +133,12 @@ jobs:
 
           Your story has been converted into a Pull Request.
 
-          ${{ steps.pr.outputs.url }}"
+          $PR_URL"
 
       - name: Comment on Failure
         if: failure()
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           ISSUE_NUMBER=$(jq -r '.issue.number' "$GITHUB_EVENT_PATH")
 
@@ -131,4 +146,3 @@ jobs:
             --body "❌ Sorry! Your story submission could not be processed automatically.
 
           Please review the workflow logs or contact a maintainer."
-          
