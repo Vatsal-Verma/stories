@@ -72,14 +72,16 @@ const AllPage = () => {
         { name: 'tag_line', weight: 0.25 },
         { name: 'body_content.paragraphs', weight: 0.2 },
       ],
-      threshold: 0.35,
+      threshold: 0.2,
+      ignoreLocation: true,
+      minMatchCharLength: 3,
       includeScore: false,
     });
   }, [stories]);
 
-  const filteredStories = React.useMemo(() => {
-    const trimmedQuery = searchQuery.trim();
+  const trimmedQuery = searchQuery.trim();
 
+  const filteredStories = React.useMemo(() => {
     if (!trimmedQuery) {
       return stories;
     }
@@ -89,10 +91,11 @@ const AllPage = () => {
     }
 
     return fuse.search(trimmedQuery).map(result => result.item);
-  }, [fuse, searchQuery, stories]);
+  }, [fuse, trimmedQuery, stories]);
 
   const totalStories = filteredStories.length;
   const displayedStories = filteredStories.slice(0, displayCount);
+  const showNoResults = trimmedQuery !== '' && totalStories === 0;
 
   const handleLoadMore = () => {
     setDisplayCount(prev => prev + storiesPerLoad);
@@ -145,8 +148,12 @@ const AllPage = () => {
               aria-label="Search stories"
             />
           </div>
-          <div className="all-page-col all-page-cards-wrapper">
-            {totalStories === 0 ? (
+          <div
+            className="all-page-col all-page-cards-wrapper"
+            role="status"
+            aria-live="polite"
+          >
+            {showNoResults ? (
               <div className="all-page-no-results">
                 No stories matched your search.
               </div>
