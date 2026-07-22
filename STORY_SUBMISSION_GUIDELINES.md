@@ -12,12 +12,17 @@ Also, check the YAML file to understand the structure. [reference YAML file](htt
 
 Every story must include the following top-level fields:
 
-- title
-- date
-- authored_by
-- post_name
-- image
-- body_content
+- Story Title
+- Organization
+- Author Name
+- Organization Location
+- Tag Line
+- Your Story
+- Story Image
+- Quote Author
+- Quote
+- Quote Image
+- Consent (checkbox)
 
 ## Metadata
 
@@ -25,19 +30,19 @@ The metadata section provides additional information about the story.
 
 The following fields are currently supported:
 
-- organization
-- company_website
-- team_members
-- project_website
-- project_funding
-- summary
-- industries
-- programming_languages
-- platforms
-- version_control_systems
-- build_tools
-- plugins
-- community_supports
+- Company Website
+- Project Website
+- Project Funding
+- Funded By
+- Summary
+- Industries
+- Programming Languages
+- Platforms
+- Version Control Systems
+- Build Tools
+- Jenkins Plugins
+- Community Support
+- Team Members
 
 > **Note:** The schema does not allow unsupported or unknown fields. Adding additional metadata fields will cause validation to fail.
 
@@ -75,6 +80,52 @@ company_website: https://example.com
 company_website: "[Example](https://example.com)"
 company_website: <https://example.com>
 ```
+
+## Image Upload Guidelines
+
+Drag and drop an image into the text area, or copy and paste it from your clipboard.
+
+Images help showcase your Jenkins success story and improve its presentation.
+
+### Supported Formats
+
+Upload images in one of the following formats:
+
+- PNG (`.png`) **(recommended)**
+- JPEG (`.jpeg`)
+- JPG (`.jpg`)
+- WebP (`.webp`)
+
+### Image Dimensions
+
+- Use **square images (1:1 aspect ratio)** whenever possible.
+- Recommended size: **1024 × 1024 pixels** or larger.
+- Images should be clear, high-quality, and not pixelated.
+
+### Images in `body_content`
+
+Images can be embedded directly within the story using standard Markdown image syntax.
+
+**Syntax**
+
+```md
+![Image description](https://example.com/image.png)
+```
+
+**Example**
+
+```md
+paragraphs:
+  - Jenkins powers our CI/CD pipeline across multiple teams.
+
+  - ![Our Jenkins dashboard](https://example.com/jenkins-dashboard.png)
+
+  - The dashboard provides real-time visibility into build status and deployment health.
+```
+
+> **Note:** Use publicly accessible image URLs or upload images through the GitHub Issue Form. Uploaded images will be automatically included in the generated story.
+
+**There are no fixed dimension or aspect ratio requirements for images in `body_content`.**
 
 ## Quotes
 The `quotes` section is used to highlight testimonials or insights from contributors.
