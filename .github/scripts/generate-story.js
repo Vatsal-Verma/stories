@@ -1,6 +1,7 @@
 import fs from 'node:fs';
 import * as yaml from 'js-yaml';
 import { downloadImages } from './download-images.js';
+import process from 'node:process';
 
 const raw = JSON.parse(
   fs.readFileSync('.story-submission/parsed.json', 'utf8'),
@@ -16,11 +17,35 @@ function norm(value) {
   return value;
 }
 
+function normalizeUrl(value, fieldLabel) {
+  if (!value) return '';
+
+  let candidate = value.trim();
+
+  const mdLink = candidate.match(/\[.*?\]\(([^)]+)\)/);
+  if (mdLink) candidate = mdLink[1].trim();
+
+  const angleBracketed = candidate.match(/^<(.+)>$/);
+  if (angleBracketed) candidate = angleBracketed[1].trim();
+
+  if (!/^[a-zA-Z][a-zA-Z\d+\-.]*:\/\//.test(candidate)) {
+    candidate = `https://${candidate}`;
+  }
+
+  try {
+    return new URL(candidate).toString();
+  } catch {
+    throw new Error(
+      `Could not parse "${fieldLabel}" as a URL (got: "${value}"). Please provide a valid website address.`,
+    );
+  }
+}
+
 const form = {
   title: norm(raw.story_title),
   organization: norm(raw.organization),
-  company_website: norm(raw.company_website),
-  project_website: norm(raw.project_website),
+  company_website: normalizeUrl(norm(raw.company_website), 'Company Website'),
+  project_website: normalizeUrl(norm(raw.project_website), 'Project Website'),
   project_funding: norm(raw.project_funding),
   funded_by: norm(raw.funded_by),
   author: norm(raw.author_name),
@@ -37,7 +62,7 @@ const form = {
   platforms: norm(raw.platforms),
   version_control_systems: norm(raw.version_control_systems),
   build_tools: norm(raw.build_tools),
-  plugins: norm(raw.jenkins_plugins),
+  plugins: norm(raw.plugins ?? raw.jenkins_plugins),
   community_supports: norm(raw.community_support),
   teams: norm(raw.teams),
   team_members: norm(raw.team_members),
@@ -61,7 +86,18 @@ function slugify(text) {
     .trim()
     .replace(/[^a-z0-9\s-]/g, '')
     .replace(/\s+/g, '-')
-    .replace(/-+/g, '-');
+    .replace(/-+/g, '-')
+    .replace(/^-|-$/g, '');
+}
+
+function deriveSlug() {
+  const fromTitle = slugify(form.title);
+  if (fromTitle) return fromTitle;
+
+  const fromOrg = slugify(form.organization);
+  if (fromOrg) return fromOrg;
+
+  return `story-${Date.now().toString(36)}`;
 }
 
 function clean(obj) {
@@ -81,8 +117,17 @@ function clean(obj) {
   return result;
 }
 
-const slug = slugify(form.title);
+const slug = deriveSlug();
 const storyDir = `src/user-story/${slug}`;
+
+if (fs.existsSync(storyDir)) {
+  console.error(
+    `A story already exists at ${storyDir}. Refusing to overwrite it. ` +
+      `If this is a genuinely new submission, its title collides with an existing story slug.`,
+  );
+  process.exit(1);
+}
+
 fs.mkdirSync(storyDir, { recursive: true });
 
 const images = await downloadImages(raw, storyDir);
@@ -91,6 +136,9 @@ const paragraphs = form.story
   .split(/\n\s*\n/)
   .map(p => p.trim())
   .filter(Boolean);
+
+const firstHeadingMatch = paragraphs[0]?.match(/^#{1,3}\s+(.+)$/m);
+const bodyTitle = firstHeadingMatch ? firstHeadingMatch[1].trim() : form.title;
 
 const story = clean({
   title: form.title,
@@ -127,7 +175,7 @@ const story = clean({
   }),
 
   body_content: {
-    title: form.title,
+    title: bodyTitle,
     paragraphs,
   },
 
@@ -150,7 +198,10 @@ fs.writeFileSync(
 fs.mkdirSync('.story-submission', { recursive: true });
 fs.writeFileSync(
   '.story-submission/output.json',
-  JSON.stringify({ slug, path: `${storyDir}/index.yaml` }, null, 2),
+  JSON.stringify({
+    slug,
+    path: `${storyDir}/index.yaml`,
+  }, null, 2),
 );
 
 console.log(`Generated ${storyDir}/index.yaml`);

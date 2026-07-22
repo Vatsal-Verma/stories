@@ -1,9 +1,18 @@
-import fs from 'node:fs';
-import path from 'node:path';
-import { Buffer } from 'node:buffer';
+import fs from "node:fs";
+import path from "node:path";
+import { Buffer } from "node:buffer";
+
+const ALLOWED_HOSTS = new Set([
+  "github.com",
+  "user-images.githubusercontent.com",
+  "objects.githubusercontent.com",
+]);
+
+const MAX_IMAGE_SIZE = 10 * 1024 * 1024; 
+const REQUEST_TIMEOUT = 10_000;
 
 function extractImageUrl(value) {
-  if (!value || typeof value !== 'string') return null;
+  if (!value || typeof value !== "string") return null;
 
   let match = value.match(/src="([^"]+)"/i);
   if (match) return match[1];
@@ -19,40 +28,58 @@ function extractImageUrl(value) {
   return null;
 }
 
+function validateImageUrl(url) {
+  const parsed = new URL(url);
+
+  if (parsed.protocol !== "https:") {
+    throw new Error("Only HTTPS image URLs are allowed.");
+  }
+
+  if (!ALLOWED_HOSTS.has(parsed.hostname)) {
+    throw new Error(`Unsupported image host: ${parsed.hostname}`);
+  }
+
+  return parsed.toString();
+}
+
 function extensionFromContentType(contentType) {
   if (!contentType) return null;
 
-  const type = contentType.split(';')[0].trim().toLowerCase();
+  const type = contentType.split(";")[0].trim().toLowerCase();
 
   switch (type) {
-    case 'image/png':
-      return 'png';
-    case 'image/jpeg':
-      return 'jpg';
-    case 'image/webp':
-      return 'webp';
-    case 'image/svg+xml':
-      return 'svg';
-    case 'image/gif':
-      return 'gif';
-    case 'image/avif':
-      return 'avif';
+    case "image/png":
+      return "png";
+    case "image/jpeg":
+      return "jpg";
+    case "image/webp":
+      return "webp";
+    case "image/svg+xml":
+      return "svg";
+    case "image/gif":
+      return "gif";
+    case "image/avif":
+      return "avif";
     default:
       return null;
   }
 }
 
 async function downloadImage(markdown, outputDir, outputName) {
-  const url = extractImageUrl(markdown);
+  const extractedUrl = extractImageUrl(markdown);
 
-  if (!url) {
+  if (!extractedUrl) {
     console.log(`No ${outputName} image found.`);
     return null;
   }
 
+  const url = validateImageUrl(extractedUrl);
+
   console.log(`Downloading ${outputName} image...`);
 
-  const response = await fetch(url);
+  const response = await fetch(url, {
+    signal: AbortSignal.timeout(REQUEST_TIMEOUT),
+  });
 
   if (!response.ok) {
     throw new Error(
@@ -60,15 +87,29 @@ async function downloadImage(markdown, outputDir, outputName) {
     );
   }
 
-  const ext = extensionFromContentType(response.headers.get('content-type'));
+  const contentLength = Number(response.headers.get("content-length"));
+
+  if (contentLength && contentLength > MAX_IMAGE_SIZE) {
+    throw new Error(
+      `${outputName} image exceeds ${MAX_IMAGE_SIZE / (1024 * 1024)} MB limit.`,
+    );
+  }
+
+  const ext = extensionFromContentType(response.headers.get("content-type"));
 
   if (!ext) {
     throw new Error(
-      `Unsupported image type: ${response.headers.get('content-type')}`,
+      `Unsupported image type: ${response.headers.get("content-type")}`,
     );
   }
 
   const buffer = Buffer.from(await response.arrayBuffer());
+
+  if (buffer.length > MAX_IMAGE_SIZE) {
+    throw new Error(
+      `${outputName} image exceeds ${MAX_IMAGE_SIZE / (1024 * 1024)} MB limit.`,
+    );
+  }
 
   const filename = `${outputName}.${ext}`;
 
@@ -80,11 +121,8 @@ async function downloadImage(markdown, outputDir, outputName) {
 }
 
 export async function downloadImages(raw, storyDir) {
-  const images = {};
-
-  images.story = await downloadImage(raw.story_image, storyDir, 'story');
-
-  images.quote = await downloadImage(raw.quote_image, storyDir, 'quote');
-
-  return images;
+  return {
+    story: await downloadImage(raw.story_image, storyDir, "story"),
+    quote: await downloadImage(raw.quote_image, storyDir, "quote"),
+  };
 }
