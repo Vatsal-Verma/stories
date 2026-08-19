@@ -1,0 +1,31 @@
+title: Testing another
+post_name: test
+authored_by: test
+date: 2026-08-19T16:00:00.000+05:30
+tag_line: test
+image: jenkins-world.png
+metadata:
+  platforms:
+    - test
+  summary: test
+  build_tools:
+    - test
+  organization: test
+  programming_languages:
+    - test
+  title: test
+  company_website: ""
+  community_supports:
+    - test
+  version_control_systems:
+    - test
+  industries:
+    - test
+map:
+  authored_by: test
+  location: India
+  geojson: '{"type":"Point","coordinates":[79.6515209,22.9942212]}'
+body_content:
+  title: test
+  paragraphs:
+    - test
