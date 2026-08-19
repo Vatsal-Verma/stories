@@ -21,6 +21,10 @@ metadata:
     - test
   industries:
     - test
+quotes:
+  - from: test
+    content: test
+    image: hero.png
 map:
   authored_by: test
   location: India
