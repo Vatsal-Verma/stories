@@ -1,0 +1,15 @@
+title: testing a story submission
+post_name: testing
+authored_by: testing
+date: 2026-08-19T14:58:00.000+05:30
+tag_line: testing
+image: jenkins-world.png
+metadata:
+  title: testing
+  organization: testing
+map:
+  authored_by: testing
+  location: testing
+  geojson: '{"type":"Point","coordinates":[84.4453079,20.5340545]}'
+body_content:
+  title: testing
