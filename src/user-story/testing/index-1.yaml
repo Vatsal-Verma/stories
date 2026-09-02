@@ -1,0 +1,24 @@
+title: testing
+post_name: testing
+authored_by: jenkins
+date: 2026-09-02T22:37:00.000+05:30
+tag_line: okay
+image: hero.png
+metadata:
+  title: okay
+  organization: okay
+  company_website: https://jenkins.io
+  project_website: https://jenkins.io
+  summary: asd
+quotes:
+  - from: okay
+    content: okay
+    image: hero.png
+map:
+  authored_by: okay
+  location: India
+  geojson: '{"type":"Point","coordinates":[79.9453122,17.5099667]}'
+body_content:
+  title: jenkins is the way to hieghts
+  paragraphs:
+    - okaynoahter
